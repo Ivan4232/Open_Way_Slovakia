@@ -1,11 +1,48 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../css/style.css';
+import Header from "../blocks/Header/Header.astro";
+// import MobileMenu from "../blocks/MobileMenu/MobileMenu.astro";
+// import Hero from "../blocks/Hero/Hero.astro";
+// import About from "../blocks/About/About.astro";
+// import Marquee from "../blocks/Marquee/Marquee.astro";
+// import Classes from "../blocks/Classes/Classes.astro";
+// import Choose from "../blocks/Choose/Choose.astro";
+// import Join from "../blocks/Join/Join.astro";
+// import Work from "../blocks/Work/Work.astro";
+// import Team from "../blocks/Team/Team.astro";
+// import Testimonial from "../blocks/Testimonial/Testimonial.astro";
+// import Package from "../blocks/Package/Package.astro";
+// import Brand from "../blocks/Brand/Brand.astro";
+// import Blog from "../blocks/Blog/Blog.astro";
+// import Footer from "../blocks/Footer/Footer.astro";
+// import { SITE_NAME } from '../config';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<!-- <title>{SITE_NAME}</title> -->
+	</head>
+	<body>
+		<Header />
+		<!-- <MobileMenu />
+		<Hero />
+		<About />
+		<Marquee />
+		<Classes />
+		<Choose />
+		<Join />
+		<Work />
+		<Team />
+		<Testimonial />
+		<Package />
+		<Brand />
+		<Blog />
+		<Footer /> -->
+		<script src="../js/libs.min.js" is:inline></script>
+		<script src="../js/main.js" is:inline></script>
+	</body>
+</html>
