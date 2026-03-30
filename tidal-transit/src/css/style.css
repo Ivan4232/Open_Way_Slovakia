@@ -134,8 +134,6 @@ h1,
   font-family: var(--bs-heading-font);
 
   background: var(--bs-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 a {
