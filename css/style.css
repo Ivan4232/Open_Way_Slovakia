@@ -24,13 +24,14 @@
 =            Variables            =
 =============================================*/
 :root{
-  --bs-orange: #ff4500;
+  --bs-purpur: linear-gradient(90deg, #6a0dad, #4b6cb7);
   --bs-font-sans-serif: "Roboto", "Helvetica Neue", Arial, sans-serif;
   --bs-heading-font: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-  --bs-gradient: linear-gradient(90deg, rgba(254, 151, 39, 1) 0%, rgba(205, 43, 37, 1) 57%, rgba(153, 12, 10, 1) 100%);
-  --bs-body-color: #fff;
-  --bs-heading-color: #ff3830;
-  --bs-body-bg: #000;
+  --bs-gradient-title: #a923e7;
+  --bs-gradient: linear-gradient(90deg, #4b6cb7, #6a0dad);
+  --bs-body-color: #000;
+  --bs-heading-color: #e0e0ff;
+  --bs-body-bg: linear-gradient(135deg, #4b6cb7, #6a0dad);
   --shadow-color: #666;
   --shadow-border: 0 4px 10px var(--shadow-color);
   --bs-body-font-size: 1.2rem;
@@ -46,7 +47,7 @@
 }
 
 li::marker{
-  color: var(--bs-orange)
+  color: var(--bs-purpur)
 }
 
 
@@ -70,8 +71,13 @@ li::marker{
   --bs-btn-font-size: var(--offset);
 }
 
+.btn:active,
+.btn:hover{
+  color: #21dfff;
+}
+
 .btn-primary{
-  --bs-btn-bg: var(--bs-orange);
+  --bs-btn-bg: var(--bs-purpur);
   --bs-btn-border-color: var(--bs-heading-color);
     transition: all 0.2s ease-in-out;
     background: var(--bs-gradient);
@@ -80,17 +86,17 @@ li::marker{
   &:hover,
   &:active,
   &:focus {
-    background-color: var(--bs-orange);
-    border-color: var(--bs-orange);
-    box-shadow: 0 10px 25px var(--bs-orange);
+    background-color: var(--bs-purpur);
+    border-color: var(--bs-purpur);
+    box-shadow: 0 10px 25px var(--bs-purpur);
     text-decoration: none;
   }
 }
 
 .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
-  background-color: var(--bs-orange);
-  border-color: var(--bs-orange);
-  box-shadow: 0 5px 15px var(--bs-orange);
+  background-color: var(--bs-purpur);
+  border-color: var(--bs-purpur);
+  box-shadow: 0 5px 15px var(--bs-purpur);
 }
 
 body,
@@ -105,13 +111,13 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   min-width: 375px;
   min-height: 667px;
+  background: #ffffff;
+  color: #182848;
 }
 
 h6,
@@ -130,10 +136,10 @@ h1,
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: var(--bs-heading-color);
+  color: #fff;
   font-family: var(--bs-heading-font);
 
-  background: var(--bs-gradient);
+  background: var(--bs-gradient-title);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -167,7 +173,7 @@ img{
 
 
 .header {
-  background-color:var(--bs-body-color);
+  background-color: #fff;
 }
 
 .main{
@@ -179,6 +185,9 @@ img{
 }
 
 .hero-section {
+    background: linear-gradient(135deg, #5f8dff, #8f5bff);
+    color: #fff;
+
     .btn{
       min-width: 320px;
       margin: 0 auto;
@@ -187,6 +196,17 @@ img{
     p {
       text-align: justify;
     }
+}
+
+.hero__title{
+  background-color: #e0e0ff;
+}
+
+.hero__img{
+min-height: 400px;
+max-width: 400px;
+object-fit: cover;
+object-position: center;
 }
 
 
@@ -199,7 +219,7 @@ img{
 
     background-color: var(--bs-body-bg);
     color:  var(--bs-body-color);
-    border: 1px solid var(--bs-orange);
+    border: 1px solid var(--bs-purpur);
     border-radius: var(--radius);
 
     .modal-header {
@@ -238,7 +258,7 @@ img{
 
   .modal-content {
     color: var(--bs-body-color);
-    border: 1px solid var(--bs-orange);
+    border: 1px solid var(--bs-purpur);
     border-radius: var(--radius);
   }
 
@@ -316,6 +336,32 @@ img{
   }
 }
 
+.features-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.features-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #5f8dff, #8f5bff);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box i {
+  color: #fff;
+  font-size: 22px;
+}
+
 /*=============================================
 =            Services            =
 =============================================*/
@@ -361,7 +407,7 @@ img{
 
 .types-work-section{
   i {
-    color: var(--bs-orange);
+    color: var(--bs-purpur);
     background: var(--bs-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -387,7 +433,7 @@ img{
 }
 
 .steps-list li::marker{
-  color: var(--bs-orange);
+  color: var(--bs-purpur);
 }
 
 .bi::before {
@@ -413,7 +459,7 @@ img{
 }
 
 .development-list li::marker {
-  color: var(--bs-orange);
+  color: var(--bs-purpur);
 }
 
 
@@ -441,10 +487,6 @@ img{
   }
 }
 
-
-
-
-
 /*=============================================
 =            Loader            =
 =============================================*/
@@ -464,7 +506,7 @@ img{
 }
 
 .spinner-border {
-  color: var(--bs-orange);
+  color: var(--bs-purpur);
 }
 
 
@@ -474,18 +516,18 @@ img{
 =            Navbar            =
 =============================================*/
 .navbar {
-  background-color: var(--bs-body-color) !important;
+  background-color: #fff !important;
 }
 
 .navbar-brand {
-  color: var(--bs-navbar-color);
+  color: #fff;
   font-size: var(--bs-body-font-size);
   font-family: var(--bs-heading-font);
   font-size:  65%;
 
   &:hover {
     text-decoration: none;
-    color: var(--bs-navbar-color);
+    color: #fff;
   }
 }
 
@@ -493,7 +535,7 @@ img{
 
 @media (min-width: 1200px) {
   .navbar {
-    background-color: var(--bs-body-color) !important;
+    background-color: #fff !important;
   }
 
   .navbar-brand {
@@ -531,3 +573,7 @@ img{
   transition: transform 1s ease;
 }
 
+.footer {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
+}
