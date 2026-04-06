@@ -207,8 +207,15 @@ min-height: 400px;
 max-width: 400px;
 object-fit: cover;
 object-position: center;
+border-radius: 16px;
 }
 
+@media (max-width: 1200px) {
+  .hero__img{
+    min-height: 300px;
+    max-width: 300px;
+    }
+}
 
 /*=============================================
 =            Modal, Form            =
@@ -378,10 +385,6 @@ object-position: center;
 
 .card{
   background: rgba(var(--bs-white-rgb), 0.1);
-  background-image: url(../images/services/services-bg.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: var(--radius);
 
   .btn-primary{
@@ -405,42 +408,29 @@ object-position: center;
 =            Types-work             =
 =============================================*/
 
-.types-work-section{
-  i {
-    color: var(--bs-purpur);
-    background: var(--bs-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 
-  .row {
-    --bs-gutter-y: 0;
-  }
+.step-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
-
-.types-work-item {
-  background: rgba(var(--bs-white-rgb), 0.1);
-  border-radius: calc(var(--radius) / 2);
-  padding: calc(var(--offset) / 2);
-  line-height: 1.1;
-  flex-grow: 1;
-
-  img {
-    display: inline-block;
-    margin-right: 5px;
-  }
+.step-card:hover {
+  transform: translateY(-5px);
 }
 
-.steps-list li::marker{
-  color: var(--bs-purpur);
+.step-number {
+  min-width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #5f8dff, #8f5bff);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
-
-.bi::before {
-  margin: 0.5rem;
-}
-
-
 
 /*=============================================
 =            Development            =
