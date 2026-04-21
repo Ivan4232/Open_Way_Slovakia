@@ -224,7 +224,7 @@ border-radius: 16px;
 
   .modal-content {
 
-    background-color: var(--bs-body-bg);
+    background-color: #fff;
     color:  var(--bs-body-color);
     border: 1px solid var(--bs-purpur);
     border-radius: var(--radius);
@@ -235,11 +235,11 @@ border-radius: 16px;
 
     form {
       input {
-        background-color: var(--bs-body-color);
+        background-color: #fff;
         color: var(--bs-body-bg);
         border-color: var(--bs-body-bg);
         &:focus {
-          background-color: var(--bs-body-color);
+          background-color: #fff;
           color: var(--bs-body-bg);
         }
       }
@@ -251,7 +251,7 @@ border-radius: 16px;
 
 .modal-header .btn-close {
   backdrop-filter: invert(100%);
-  background-color: var(--bs-body-color);
+  background-color: #fff;
 }
 
 .form-floating > label{
@@ -286,6 +286,19 @@ border-radius: 16px;
   }
 }
 
+@media (max-width: 768px){
+    .modal-content{
+      max-width: 450px;
+        margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 562px){
+    .modal-content{
+      max-width: 400px;
+        margin: 0 auto;
+    }
+  }
 
 /*=============================================
 =            Social            =
